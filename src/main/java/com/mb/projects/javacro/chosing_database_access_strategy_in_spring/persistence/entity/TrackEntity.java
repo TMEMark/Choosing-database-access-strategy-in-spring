@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table
+@Table(name = "track")
 public class TrackEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

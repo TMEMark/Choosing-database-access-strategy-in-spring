@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table
+@Table(name = "user_listen_history")
 public class UserListenHistoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

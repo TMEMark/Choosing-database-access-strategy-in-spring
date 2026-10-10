@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table
+@Table(name = "album")
 public class AlbumEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
