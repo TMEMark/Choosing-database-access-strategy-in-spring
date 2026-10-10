@@ -6,7 +6,7 @@ services:
     container_name: music_jpa_db
     environment:
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD:
       POSTGRES_DB: music_db
     ports:
       - "5432:5432"

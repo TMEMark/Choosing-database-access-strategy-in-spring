@@ -1,4 +1,4 @@
-package com.mb.projects.javacro.chosing_database_access_strategy_in_spring.controller;
+package com.mb.projects.javacro.chosing_database_access_strategy_in_spring.controller.jdbc;
 
 import com.mb.projects.javacro.chosing_database_access_strategy_in_spring.persistence.model.AlbumModel;
 import com.mb.projects.javacro.chosing_database_access_strategy_in_spring.persistence.repository.jdbc.jdbctemplate.TemplateAlbumRepository;
@@ -12,12 +12,12 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/albums")
-public class AlbumController {
+public class AlbumJdbcController {
 
     private final RawJdbcAlbumRepository rawRepo;
     private final TemplateAlbumRepository templateRepo;
 
-    public AlbumController(RawJdbcAlbumRepository rawRepo, TemplateAlbumRepository templateRepo) {
+    public AlbumJdbcController(RawJdbcAlbumRepository rawRepo, TemplateAlbumRepository templateRepo) {
         this.rawRepo = rawRepo;
         this.templateRepo = templateRepo;
     }

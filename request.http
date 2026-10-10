@@ -1,0 +1,387 @@
+### ==========================================
+### JDBC CONTROLLERS (RAW JDBC & JDBCTEMPLATE)
+### ==========================================
+
+### ------------------------------------------
+### 1. ALBUM JDBC CONTROLLERS
+### ------------------------------------------
+
+### Create Album (Raw JDBC)
+POST http://localhost:8080/api/albums/jdbc/raw
+Content-Type: application/json
+
+{
+  "title": "Raw Album Title",
+  "releaseYear": 2024,
+  "artistId": "00000000-0000-0000-0000-000000000000"
+}
+
+### Get All Albums (Raw JDBC)
+GET http://localhost:8080/api/albums/jdbc/raw
+
+### Get Album by ID (Raw JDBC)
+GET http://localhost:8080/api/albums/jdbc/raw/00000000-0000-0000-0000-000000000000
+
+### Update Album (Raw JDBC)
+PUT http://localhost:8080/api/albums/jdbc/raw/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+{
+  "title": "Updated Raw Album",
+  "releaseYear": 2025,
+  "artistId": "00000000-0000-0000-0000-000000000000"
+}
+
+### Delete Album (Raw JDBC)
+DELETE http://localhost:8080/api/albums/jdbc/raw/00000000-0000-0000-0000-000000000000
+
+### ---
+
+### Create Album (JdbcTemplate)
+POST http://localhost:8080/api/albums/template
+Content-Type: application/json
+
+{
+  "title": "Template Album Title",
+  "releaseYear": 2024,
+  "artistId": "00000000-0000-0000-0000-000000000000"
+}
+
+### Get All Albums (JdbcTemplate)
+GET http://localhost:8080/api/albums/jdbc/template
+
+### Get Album by ID (JdbcTemplate)
+GET http://localhost:8080/api/albums/jdbc/template/00000000-0000-0000-0000-000000000000
+
+### Update Album (JdbcTemplate)
+PUT http://localhost:8080/api/albums/jdbc/template/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+{
+  "title": "Updated Template Album",
+  "releaseYear": 2025,
+  "artistId": "00000000-0000-0000-0000-000000000000"
+}
+
+### Delete Album (JdbcTemplate)
+DELETE http://localhost:8080/api/albums/jdbc/template/00000000-0000-0000-0000-000000000000
+
+
+### ------------------------------------------
+### 2. ARTIST JDBC CONTROLLERS
+### ------------------------------------------
+
+### Create Artist (Raw JDBC)
+POST http://localhost:8080/api/artists/raw
+Content-Type: application/json
+
+{
+  "name": "The Weeknd",
+  "country": "Canada"
+}
+
+### Get All Artists (Raw JDBC)
+GET http://localhost:8080/api/artists/raw
+
+### Get Artist by ID (Raw JDBC)
+GET http://localhost:8080/api/artists/raw/00000000-0000-0000-0000-000000000000
+
+### Update Artist (Raw JDBC)
+PUT http://localhost:8080/api/artists/raw/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+{
+  "name": "The Weeknd Updated",
+  "country": "Canada"
+}
+
+### Delete Artist (Raw JDBC)
+DELETE http://localhost:8080/api/artists/raw/00000000-0000-0000-0000-000000000000
+
+### ---
+
+### Create Artist (JdbcTemplate)
+POST http://localhost:8080/api/artists/template
+Content-Type: application/json
+
+{
+  "name": "Daft Punk",
+  "country": "France"
+}
+
+### Get All Artists (JdbcTemplate)
+GET http://localhost:8080/api/artists/template
+
+### Get Artist by ID (JdbcTemplate)
+GET http://localhost:8080/api/artists/template/00000000-0000-0000-0000-000000000000
+
+### Update Artist (JdbcTemplate)
+PUT http://localhost:8080/api/artists/template/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+{
+  "name": "Daft Punk Updated",
+  "country": "France"
+}
+
+### Delete Artist (JdbcTemplate)
+DELETE http://localhost:8080/api/artists/template/00000000-0000-0000-0000-000000000000
+
+
+### ------------------------------------------
+### 3. TRACK JDBC CONTROLLERS
+### ------------------------------------------
+
+### Create Track (Raw JDBC)
+POST http://localhost:8080/api/tracks/raw
+Content-Type: application/json
+
+{
+  "title": "Blinding Lights",
+  "durationSeconds": 200,
+  "genreName": "Pop",
+  "albumId": "00000000-0000-0000-0000-000000000000"
+}
+
+### Get All Tracks (Raw JDBC)
+GET http://localhost:8080/api/tracks/raw
+
+### Get Track by ID (Raw JDBC)
+GET http://localhost:8080/api/tracks/raw/00000000-0000-0000-0000-000000000000
+
+### Update Track (Raw JDBC)
+PUT http://localhost:8080/api/tracks/raw/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+{
+  "title": "Blinding Lights (Remix)",
+  "durationSeconds": 210,
+  "genreName": "Pop",
+  "albumId": "00000000-0000-0000-0000-000000000000"
+}
+
+### Delete Track (Raw JDBC)
+DELETE http://localhost:8080/api/tracks/raw/00000000-0000-0000-0000-000000000000
+
+### ---
+
+### Create Track (JdbcTemplate)
+POST http://localhost:8080/api/tracks/template
+Content-Type: application/json
+
+{
+  "title": "Save Your Tears",
+  "durationSeconds": 215,
+  "genreName": "Pop",
+  "albumId": "00000000-0000-0000-0000-000000000000"
+}
+
+### Get All Tracks (JdbcTemplate)
+GET http://localhost:8080/api/tracks/template
+
+### Get Track by ID (JdbcTemplate)
+GET http://localhost:8080/api/tracks/template/00000000-0000-0000-0000-000000000000
+
+### Update Track (JdbcTemplate)
+PUT http://localhost:8080/api/tracks/template/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+{
+  "title": "Save Your Tears (Remix)",
+  "durationSeconds": 220,
+  "genreName": "Pop",
+  "albumId": "00000000-0000-0000-0000-000000000000"
+}
+
+### Delete Track (JdbcTemplate)
+DELETE http://localhost:8080/api/tracks/template/00000000-0000-0000-0000-000000000000
+
+
+### ------------------------------------------
+### 4. USER LISTEN HISTORY JDBC CONTROLLERS
+### ------------------------------------------
+
+### Create Listen History (Raw JDBC)
+POST http://localhost:8080/api/history/raw
+Content-Type: application/json
+
+{
+  "userId": "00000000-0000-0000-0000-000000000000",
+  "trackId": "00000000-0000-0000-0000-000000000000",
+  "deviceType": "MOBILE"
+}
+
+### Get All Listen History (Raw JDBC)
+GET http://localhost:8080/api/history/raw
+
+### Get Listen History by ID (Raw JDBC)
+GET http://localhost:8080/api/history/raw/00000000-0000-0000-0000-000000000000
+
+### Update Listen History (Raw JDBC)
+PUT http://localhost:8080/api/history/raw/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+{
+  "userId": "00000000-0000-0000-0000-000000000000",
+  "trackId": "00000000-0000-0000-0000-000000000000",
+  "deviceType": "DESKTOP"
+}
+
+### Delete Listen History (Raw JDBC)
+DELETE http://localhost:8080/api/history/raw/00000000-0000-0000-0000-000000000000
+
+### ---
+
+### Create Listen History (JdbcTemplate)
+POST http://localhost:8080/api/history/template
+Content-Type: application/json
+
+{
+  "userId": "00000000-0000-0000-0000-000000000000",
+  "trackId": "00000000-0000-0000-0000-000000000000",
+  "deviceType": "WEB"
+}
+
+### Get All Listen History (JdbcTemplate)
+GET http://localhost:8080/api/history/template
+
+### Get Listen History by ID (JdbcTemplate)
+GET http://localhost:8080/api/history/template/00000000-0000-0000-0000-000000000000
+
+### Update Listen History (JdbcTemplate)
+PUT http://localhost:8080/api/history/template/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+{
+  "userId": "00000000-0000-0000-0000-000000000000",
+  "trackId": "00000000-0000-0000-0000-000000000000",
+  "deviceType": "TABLET"
+}
+
+### Delete Listen History (JdbcTemplate)
+DELETE http://localhost:8080/api/history/template/00000000-0000-0000-0000-000000000000
+
+
+### ==========================================
+### 5. SPRING DATA JPA CONTROLLERS
+### ==========================================
+
+### Get all albums (Spring Data)
+GET http://localhost:8080/api/albums/spring-data
+
+### Get album by ID (Spring Data)
+GET http://localhost:8080/api/albums/spring-data/00000000-0000-0000-0000-000000000000
+
+### Create album (Spring Data)
+POST http://localhost:8080/api/albums/spring-data
+Content-Type: application/json
+
+{
+  "title": "After Hours",
+  "releaseYear": 2020
+}
+
+### ---
+
+### Get all artists (Spring Data)
+GET http://localhost:8080/api/artists/spring-data
+
+### Search artist by name (Spring Data)
+GET http://localhost:8080/api/artists/spring-data/search?name=The Weeknd
+
+### ---
+
+### Filter long tracks by genre (Spring Data)
+GET http://localhost:8080/api/tracks/spring-data/filter?genre=Pop&minDuration=180
+
+
+### ==========================================
+### 6. JPA ENTITY MANAGER CONTROLLERS
+### ==========================================
+
+### Get all albums (Entity Manager)
+GET http://localhost:8080/api/albums/entity-manager
+
+### Get album by ID (Entity Manager)
+GET http://localhost:8080/api/albums/entity-manager/00000000-0000-0000-0000-000000000000
+
+### Create album (Entity Manager)
+POST http://localhost:8080/api/albums/entity-manager
+Content-Type: application/json
+
+{
+  "title": "Dawn FM",
+  "releaseYear": 2022
+}
+
+### ---
+
+### Get all artists (Entity Manager)
+GET http://localhost:8080/api/artists/entity-manager
+
+### ---
+
+### Get all tracks (Entity Manager)
+GET http://localhost:8080/api/tracks/entity-manager
+
+### Filter long tracks by genre (Entity Manager)
+GET http://localhost:8080/api/tracks/entity-manager/filter?genre=Pop&minDuration=180
+
+
+### ==========================================
+### 7. JPA CRITERIA API CONTROLLERS
+### ==========================================
+
+### Filter long tracks by genre (Criteria API)
+GET http://localhost:8080/api/tracks/criteria?genre=Pop&minDuration=180
+
+
+### ==========================================
+### 8. QUERYDSL CONTROLLERS
+### ==========================================
+
+### Filter long tracks by genre (QueryDSL)
+GET http://localhost:8080/api/tracks/querydsl?genre=Pop&minDuration=180
+
+### Get artist engagement metrics (QueryDSL Analytics)
+GET http://localhost:8080/api/analytics/querydsl?genre=Pop&minReleaseYear=2020
+
+
+### ==========================================
+### 9. jOOQ CONTROLLERS
+### ==========================================
+
+### Get all albums (jOOQ)
+GET http://localhost:8080/api/albums/jooq
+
+### Get album by ID (jOOQ)
+GET http://localhost:8080/api/albums/jooq/00000000-0000-0000-0000-000000000000
+
+### Create album (jOOQ)
+POST http://localhost:8080/api/albums/jooq
+Content-Type: application/json
+
+{
+  "title": "Starboy",
+  "releaseYear": 2016
+}
+
+### ---
+
+### Get all artists (jOOQ)
+GET http://localhost:8080/api/artists/jooq
+
+### ---
+
+### Get all tracks (jOOQ)
+GET http://localhost:8080/api/tracks/jooq
+
+### ---
+
+### Get all user listen history (jOOQ)
+GET http://localhost:8080/api/listen-history/jooq
+
+### ---
+
+### Get artist engagement metrics (jOOQ Analytics)
+GET http://localhost:8080/api/analytics/jooq?genre=Pop&minReleaseYear=2020

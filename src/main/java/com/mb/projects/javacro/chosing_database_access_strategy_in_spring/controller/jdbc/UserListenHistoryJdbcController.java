@@ -1,4 +1,4 @@
-package com.mb.projects.javacro.chosing_database_access_strategy_in_spring.controller;
+package com.mb.projects.javacro.chosing_database_access_strategy_in_spring.controller.jdbc;
 
 import com.mb.projects.javacro.chosing_database_access_strategy_in_spring.persistence.model.UserListenHistoryModel;
 import com.mb.projects.javacro.chosing_database_access_strategy_in_spring.persistence.repository.jdbc.jdbctemplate.TemplateUserListenHistoryRepository;
@@ -13,12 +13,12 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/history")
-public class UserListenHistoryController {
+public class UserListenHistoryJdbcController {
 
     private final RawJdbcUserListenHistoryRepository rawRepo;
     private final TemplateUserListenHistoryRepository templateRepo;
 
-    public UserListenHistoryController(RawJdbcUserListenHistoryRepository rawRepo, TemplateUserListenHistoryRepository templateRepo) {
+    public UserListenHistoryJdbcController(RawJdbcUserListenHistoryRepository rawRepo, TemplateUserListenHistoryRepository templateRepo) {
         this.rawRepo = rawRepo;
         this.templateRepo = templateRepo;
     }

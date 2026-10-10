@@ -10,9 +10,6 @@ import java.util.UUID;
 @Repository
 public interface SpringDataTrackRepository extends JpaRepository<TrackEntity, UUID> {
 
-    // TODO -> @marko.buljan ubaci find by name
-
-
     /**
      * Filters Track entries by genre and minimum duration.
      * Tracks are ordered by title ascending.

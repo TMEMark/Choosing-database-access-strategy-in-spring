@@ -9,11 +9,11 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-public class TrackQueryDslRepository {
+public class TrackQueryDSLRepository {
 
     private final JPAQueryFactory queryFactory;
 
-    public TrackQueryDslRepository(JPAQueryFactory queryFactory) {
+    public TrackQueryDSLRepository(JPAQueryFactory queryFactory) {
         this.queryFactory = queryFactory;
     }
 

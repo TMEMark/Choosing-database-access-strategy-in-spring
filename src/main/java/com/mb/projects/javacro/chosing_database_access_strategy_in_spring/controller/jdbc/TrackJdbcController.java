@@ -1,4 +1,4 @@
-package com.mb.projects.javacro.chosing_database_access_strategy_in_spring.controller;
+package com.mb.projects.javacro.chosing_database_access_strategy_in_spring.controller.jdbc;
 
 import com.mb.projects.javacro.chosing_database_access_strategy_in_spring.persistence.model.TrackModel;
 import com.mb.projects.javacro.chosing_database_access_strategy_in_spring.persistence.repository.jdbc.jdbctemplate.TemplateTrackRepository;
@@ -12,12 +12,12 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/tracks")
-public class TrackController {
+public class TrackJdbcController {
 
     private final RawJdbcTrackRepository rawRepo;
     private final TemplateTrackRepository templateRepo;
 
-    public TrackController(RawJdbcTrackRepository rawRepo, TemplateTrackRepository templateRepo) {
+    public TrackJdbcController(RawJdbcTrackRepository rawRepo, TemplateTrackRepository templateRepo) {
         this.rawRepo = rawRepo;
         this.templateRepo = templateRepo;
     }

@@ -1,4 +1,4 @@
-package com.mb.projects.javacro.chosing_database_access_strategy_in_spring.controller;
+package com.mb.projects.javacro.chosing_database_access_strategy_in_spring.controller.jdbc;
 
 import com.mb.projects.javacro.chosing_database_access_strategy_in_spring.persistence.model.ArtistModel;
 import com.mb.projects.javacro.chosing_database_access_strategy_in_spring.persistence.repository.jdbc.jdbctemplate.TemplateArtistRepository;
@@ -12,12 +12,12 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/artists")
-public class ArtistController {
+public class ArtistJdbcController {
 
     private final RawJdbcArtistRepository rawRepo;
     private final TemplateArtistRepository templateRepo;
 
-    public ArtistController(RawJdbcArtistRepository rawRepo, TemplateArtistRepository templateRepo) {
+    public ArtistJdbcController(RawJdbcArtistRepository rawRepo, TemplateArtistRepository templateRepo) {
         this.rawRepo = rawRepo;
         this.templateRepo = templateRepo;
     }
